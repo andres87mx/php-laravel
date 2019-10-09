@@ -11,12 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
-Route::get('/test', function () {
-    return view('test', [
-        'title' => 'Curso de laravel en Platzi!!!'
-    ]);
-});
+Route::get('/dashboard', 'DashboardController@index');
